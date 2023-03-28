@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="styles.css" />
+    <script type="text/javascript" src="script.js"></script>
+    <!-- style 태그 추가 후. 테이블의 border 속성 변경 -->
+    <style>
+      table {
+        border: 1px solid #d9d9d9;
+        border-collapse: collapse;
+      }
+    </style>
+    <title>20213091 최지원</title>
+  </head>
+  <body>
+    <!-- nav 태그 사용 -->
+    <nav id="navigation">
+      <ol>
+        <li><a href="#">메뉴 1</a></li>
+        <li><a href="#">메뉴 2</a></li>
+        <li><a href="#">메뉴 3</a></li>
+        <li><a href="#">메뉴 4</a></li>
+        <li><a href="#">메뉴 5</a></li>
+      </ol>
+    </nav>
+
+    <!-- 이미지 추가 / 네이버 사이트 연결 (alt 옵션 사용) -->
+    <a href="https://www.naver.com/">
+      <img src="naver.jpeg" alt="네이버(바로가기)" width="200" />
+    </a>
+
+    <div>
+      <!-- 두 개 숫자를 input 받음 -->
+      <input id="input1" />
+      <input id="input2" />
+      <!-- 곱하기 계산 후 결과값을 return(alert 형태로 return)하는 함수 사용 -->
+      <button onclick="multiplication()">곱셈 버튼</button>
+    </div>
+
+    <!-- aside 태그 사용 -->
+    <aside>
+      <table>
+        <tr>
+          <th colspan="6">시간표</th>
+        </tr>
+        <tr>
+          <th></th>
+          <th>월</th>
+          <th>화</th>
+          <th>수</th>
+          <th>목</th>
+          <th>금</th>
+        </tr>
+        <tr>
+          <th>11:00 - 11:30</th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td id="lifedesign" rowspan="4">인생 설계와 진로</td>
+        </tr>
+        <tr>
+          <th>11:30 - 12:00</th>
+        </tr>
+        <tr>
+          <th>12:00 - 12:30</th>
+          <td class="webserver" rowspan="3">웹서버 컴퓨팅</td>
+          <td></td>
+          <td class="webserver" rowspan="3">웹서버 컴퓨팅</td>
+        </tr>
+        <tr>
+          <th>12:30 - 13:00</th>
+        </tr>
+        <tr>
+          <th>13:00 - 13:30</th>
+        </tr>
+        <tr>
+          <th>13:30 - 14:00</th>
+          <td class="graphics" rowspan="3">컴퓨터 그래픽스</td>
+          <td class="os" rowspan="3">운영체제</td>
+          <td class="graphics" rowspan="3">컴퓨터 그래픽스</td>
+          <td class="os" rowspan="3">운영체제</td>
+          <td class="webclient" rowspan="3">웹클라이언트 컴퓨팅</td>
+        </tr>
+        <tr>
+          <th>14:00 - 14:30</th>
+        </tr>
+        <tr>
+          <th>14:30 - 15:00</th>
+        </tr>
+        <tr>
+          <th>15:00 - 15:30</th>
+          <td></td>
+          <td class="webclient" rowspan="3">웹클라이언트 컴퓨팅</td>
+          <td id="design" rowspan="6">디자인의 이해</td>
+          <td></td>
+          <td id="speaking" rowspan="4">자신있게 말하기</td>
+        </tr>
+        <tr>
+          <th>15:30 - 16:00</th>
+        </tr>
+        <tr>
+          <th>16:00 - 16:30</th>
+        </tr>
+        <tr>
+          <th>16:30 - 17:00</th>
+        </tr>
+        <tr>
+          <th>17:00 - 17:30</th>
+        </tr>
+        <tr>
+          <th>17:30 - 18:00</th>
+        </tr>
+      </table>
+    </aside>
+  </body>
+</html>
