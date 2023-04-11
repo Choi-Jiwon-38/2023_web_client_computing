@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let output = '';
+            for (let i = 0; i < 10; i++) {
+                output += '<div></div>';
+            }
+            document.body.innerHTML = output;
+
+            const divs = document.querySelectorAll('div');
+            for (let i = 0; i < divs.length; i++) {
+                const div = divs[i];
+
+                div.style.height = '10px';
+                
+                if (i < 5) {
+                    div.style.background = 'yellow';
+                } else {
+                    div.style.background = "rgb(0,0,0)";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
