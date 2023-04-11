@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restful Web</title>
+    <script>
+        function doAction(){
+            var s = document.getElementById('input').value;
+            console.log(s);
+            var form = document.forms.getId;
+            form.getAttribute('action'); // post 출력
+            var url = form.getAttribute('action') + '/' + encodeURI(s);
+            console.log(url);
+            form.setAttribute("action", url);
+        }
+    </script>
+</head>
+<body>
+    <h1> Post </h1>
+    <form method="post" action="http://127.0.0.1:52271">
+        Name : <input type="text" name="name">
+        Region : <input type="text" name="region">
+        <input type="submit" value="submit">
+    </form>
+    <HR COLOR=“#FF0000” WIDTH=“70%” SIZE=“10” NOSHADE ALIGN=“LEFT”>
+
+    <h1> Get all </h1>
+    <!-- URL을 직접 입력 : http://127.0.0.1:52271/user -->
+    <form method="get" action="http://127.0.0.1:52271/user">
+        <input type="submit" value="submit">
+    </form>
+    <HR COLOR=“#FF0000” WIDTH=“70%” SIZE=“10” NOSHADE ALIGN=“LEFT”>
+
+    <h1> Get User ID </h1>
+    <!-- URL을 직접 입력 : http://127.0.0.1:52271/user/1 -->   
+    <form method="get" name="getId" action="http://127.0.0.1:52271/user">
+        Id : <input type="text" id="input">
+        <button onclick="doAction();">Click</button>
+    </form>
+    <HR COLOR=“#FF0000” WIDTH=“70%” SIZE=“10” NOSHADE ALIGN=“LEFT”>
+</body>
+</html>
