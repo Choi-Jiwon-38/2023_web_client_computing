@@ -1,16 +1,31 @@
 import "./App.css";
 import { useState } from "react";
 
+function Viewer({ number }) {
+  return <div>
+    {number % 2 === 0 ? <h3>even</h3> : <h3>odd</h3>}
+  </div>
+}
+
 function Body() {
-  const [text, setText] = useState("");
-  const handleOnChange = (e) => {
-    setText(e.target.value);
+  const [number, setNumber] = useState(0);
+  const onIncrease = () => {
+    setNumber(number + 1);
   };
+
+  const onDecrease = () => {
+    setNumber(number - 1);
+  }
   
   return (
     <div>
-      <input onChange={handleOnChange} />
-      <div>{text}</div>
+      <h2>{number}</h2>
+      <Viewer number={number} />
+
+      <div>
+        <button onClick={onDecrease}>-</button>
+        <button onClick={onIncrease}>+</button>
+      </div>
     </div>
   )
 }
