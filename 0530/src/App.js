@@ -1,21 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState } from "react";
 
 function Body() {
-  function handleOnClick(e) {
-    console.log(e);
-    console.log(e.target.name);
-  }
+  const [count, setCount] = useState(0);
+
+  const onIncrease = () => {
+    setCount(count + 1);
+  };
+
   return (
-    <div className="body">
-      <button name="A Btn" onClick={handleOnClick}>
-        A Button
-      </button>
-      <button name="B Btn" onClick={handleOnClick}>
-        B Button
-      </button>
+    <div>
+      <h2>{count}</h2>
+      <button onClick={onIncrease}>+</button>
     </div>
-  )
+  );
 }
 
 function App() {
