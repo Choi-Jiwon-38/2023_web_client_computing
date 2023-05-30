@@ -2,18 +2,17 @@ import "./App.css";
 import { useState } from "react";
 
 function Body() {
-  const [count, setCount] = useState(0);
-
-  const onIncrease = () => {
-    setCount(count + 1);
+  const [text, setText] = useState("");
+  const handleOnChange = (e) => {
+    setText(e.target.value);
   };
-
+  
   return (
     <div>
-      <h2>{count}</h2>
-      <button onClick={onIncrease}>+</button>
+      <input onChange={handleOnChange} />
+      <div>{text}</div>
     </div>
-  );
+  )
 }
 
 function App() {
