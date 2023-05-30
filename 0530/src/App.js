@@ -1,10 +1,8 @@
 import "./App.css";
 import { useState } from "react";
 
-function Viewer({ number }) {
-  return <div>
-    {number % 2 === 0 ? <h3>even</h3> : <h3>odd</h3>}
-  </div>
+function Viewer() {
+  console.log('rendering');
 }
 
 function Body() {
